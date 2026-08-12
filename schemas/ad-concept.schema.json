@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Advertising Concept",
+  "type": "object",
+  "required": ["id", "audience_segment", "trigger", "scene", "composition", "prompt"],
+  "properties": {
+    "id": {"type": "string"},
+    "audience_segment": {"type": "string"},
+    "trigger": {"enum": ["pain", "desire", "objection", "aspiration", "proof", "transformation"]},
+    "scene": {"type": "object"},
+    "composition": {"type": "object"},
+    "prompt": {"type": "string"},
+    "provider_parameters": {"type": "object"},
+    "status": {"enum": ["draft", "generated", "approved", "rejected"]},
+    "failure_reason": {"type": "string"}
+  },
+  "additionalProperties": false
+}
