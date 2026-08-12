@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Brand Context",
+  "type": "object",
+  "required": ["brand_summary", "audience", "campaign_goal", "unknowns"],
+  "properties": {
+    "brand_summary": {"type": "string"},
+    "audience": {"type": "object"},
+    "pains": {"type": "array", "items": {"type": "string"}},
+    "desires": {"type": "array", "items": {"type": "string"}},
+    "objections": {"type": "array", "items": {"type": "string"}},
+    "offer": {"type": "object"},
+    "proof_points": {"type": "array", "items": {"type": "string"}},
+    "visual_constraints": {"type": "object"},
+    "copy_constraints": {"type": "object"},
+    "campaign_goal": {"type": "string"},
+    "unknowns": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
