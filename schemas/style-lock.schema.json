@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Style Lock",
+  "type": "object",
+  "required": ["id", "version", "status", "reference", "parameters", "composition", "avoid"],
+  "properties": {
+    "id": {"type": "string"},
+    "version": {"type": "string"},
+    "status": {"enum": ["draft", "approved", "retired"]},
+    "reference": {"type": "object"},
+    "parameters": {"type": "object"},
+    "composition": {"type": "object"},
+    "avoid": {"type": "array", "items": {"type": "string"}},
+    "tested_scenes": {"type": "array", "items": {"type": "string"}},
+    "known_failures": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}
